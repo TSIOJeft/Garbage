@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_shop"
+            android:icon="@drawable/ic_add_shopping_cart_black_48dp"
+            android:title="@string/shop" />
+        <item
+            android:id="@+id/nav_rc"
+            android:icon="@drawable/ic_star_black_48dp"
+            android:title="@string/recommend" />
+        <item
+            android:id="@+id/nav_pc"
+            android:icon="@drawable/ic_mood_black_48dp"
+            android:title="@string/pc" />
+        <item
+            android:id="@+id/nav_rb"
+            android:icon="@drawable/ic_lightbulb_outline_black_48dp"
+            android:title="@string/rb" />
+    </group>
+
+    <item android:title="@string/other">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_star_black_48dp"
+                android:title="@string/share" />
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_flag"
+                android:title="@string/about" />
+
+        </menu>
+    </item>
+
+</menu>
