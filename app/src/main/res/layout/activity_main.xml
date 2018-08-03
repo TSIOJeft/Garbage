@@ -13,20 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <!--<LinearLayout-->
-        <!--android:gravity="center"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent">-->
-
-        <!--<Button-->
-            <!--android:id="@+id/_SSS"-->
-            <!--android:layout_width="64dp"-->
-            <!--android:layout_height="64dp"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:text="ssss" />-->
-    <!--</LinearLayout>-->
-
-
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
