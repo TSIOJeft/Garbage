@@ -6,7 +6,7 @@ import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 
 public class BmobDataSet {
-    public static void DataSet(String t, String c, String p, String b, String u, String m, int type) {
+    public static void dataSet(String t, String c, String p, String b, String u, String m, int type) {
         BmobDataObject dataObject = new BmobDataObject();
         dataObject.setBs(b);
         dataObject.setPic(p);
