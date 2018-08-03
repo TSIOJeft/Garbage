@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity
 
     public void initData() {
         Bmob.initialize(this, getString(R.string.bmob_id));
-//        BmobDataSet.dataSet("test", "test", "test", "test", "test","10",1);
+//        BmobDataSet.dataSet("test", "test", "test", "test", "test", "10", 1);
     }
 
 
