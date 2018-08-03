@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        navigationView.ti
+        navigationView.setItemIconTintList(null);
 //Tablayout about
         TabLayout tabLayout = findViewById(R.id.tab);
         viewPager = findViewById(R.id.viewpager);

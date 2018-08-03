@@ -9,6 +9,7 @@ public class BmobDataObject extends BmobObject {
     String pic;
     String url;
     String money;
+    int type;
 
     public void setTitle(String title) {
         this.title = title;
@@ -56,5 +57,13 @@ public class BmobDataObject extends BmobObject {
 
     public void setMoney(String money) {
         this.money = money;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setType(int type) {
+        this.type = type;
     }
 }
