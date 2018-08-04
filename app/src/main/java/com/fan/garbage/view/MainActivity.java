@@ -11,8 +11,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.tencent.bugly.crashreport.CrashReport;
 
-import java.util.Objects;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -50,18 +49,25 @@ public class MainActivity extends AppCompatActivity
         tabLayout.setupWithViewPager(viewPager);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
-//        TabLayout.Tab o = tabLayout.getTabAt(0);
-//        TabLayout.Tab oo = tabLayout.getTabAt(1);
-//        TabLayout.Tab ooo = tabLayout.getTabAt(2);
-//        TabLayout.Tab oooo = tabLayout.getTabAt(3);
-//        o.setIcon(R.drawable.ic_flag_white_24dp);
-//        oo.setIcon(R.drawable.ic_package_variant);
-//        ooo.setIcon(R.drawable.ic_hangouts);
-//        oooo.setIcon(R.drawable.ic_leaf);
-        Objects.requireNonNull(tabLayout.getTabAt(0)).setIcon(R.drawable.ic_add_shopping_cart_white_48dp);
-        Objects.requireNonNull(tabLayout.getTabAt(1)).setIcon(R.drawable.ic_star_white_48dp);
-        Objects.requireNonNull(tabLayout.getTabAt(2)).setIcon(R.drawable.ic_mood_white_48dp);
-        Objects.requireNonNull(tabLayout.getTabAt(3)).setIcon(R.drawable.ic_lightbulb_outline_white_48dp);
+
+
+        /* 正常情况不会是null，notnull意思一下 */
+        TabLayout.Tab tab = tabLayout.getTabAt(0);
+        if (tab != null) {
+            tab.setIcon(R.drawable.ic_add_shopping_cart_white_48dp);
+        }
+        tab = tabLayout.getTabAt(1);
+        if (tab != null) {
+            tab.setIcon(R.drawable.ic_star_white_48dp);
+        }
+        tab = tabLayout.getTabAt(2);
+        if (tab != null) {
+            tab.setIcon(R.drawable.ic_mood_white_48dp);
+        }
+        tab = tabLayout.getTabAt(3);
+        if (tab != null) {
+            tab.setIcon(R.drawable.ic_lightbulb_outline_white_48dp);
+        }
     }
 
     public void initData() {
@@ -105,20 +111,20 @@ public class MainActivity extends AppCompatActivity
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
         if (id == R.id.nav_shop) {
             viewPager.setCurrentItem(0);
+        } else if (id == R.id.nav_rc) {
+            viewPager.setCurrentItem(1);
         } else if (id == R.id.nav_about) {
             startActivity(new Intent().setClass(this, AboutActivity.class));
         } else if (id == R.id.nav_pc) {
             viewPager.setCurrentItem(2);
         } else if (id == R.id.nav_rb) {
             viewPager.setCurrentItem(3);
-        } else if (id == R.id.nav_rc) {
-            viewPager.setCurrentItem(1);
         } else if (id == R.id.nav_share) {
         }
 

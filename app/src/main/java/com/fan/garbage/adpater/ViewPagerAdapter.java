@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 public class ViewPagerAdapter extends FragmentPagerAdapter {
-    private Fragment[] pages = new Fragment[4];
+    private final Fragment[] pages = new Fragment[4];
 
     public ViewPagerAdapter(FragmentManager f) {
         super(f);
