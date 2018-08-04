@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">一起捡垃圾</string>
+    <string name="app_name">一起薅羊毛</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -16,4 +16,7 @@
     <string name="share">分享</string>
     <string name="about">有关</string>
     <string name="notice">Notice</string>
+    <string name="des2">被拖下水的苦逼肥宅，服务器数据上传的主要工作，控制台的 编写，商品信息获取解析的大大工作，负责优化代码。</string>
+    <string name="des">APP部分编写的工作，一直沉迷学习无法敲代码，服务器数据分类，相关界面主要设计编写。</string>
+    <string name="des3">小米市场开发者提供，帮助上架小米应用市场。</string>
 </resources>

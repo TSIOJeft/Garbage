@@ -1,5 +1,6 @@
 package com.fan.garbage.view;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -54,10 +55,10 @@ public class MainActivity extends AppCompatActivity
 //        oo.setIcon(R.drawable.ic_package_variant);
 //        ooo.setIcon(R.drawable.ic_hangouts);
 //        oooo.setIcon(R.drawable.ic_leaf);
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_flag);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_package_variant);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_hangouts);
-        tabLayout.getTabAt(3).setIcon(R.drawable.ic_leaf);
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_add_shopping_cart_white_48dp);
+        tabLayout.getTabAt(1).setIcon(R.drawable.ic_star_white_48dp);
+        tabLayout.getTabAt(2).setIcon(R.drawable.ic_mood_white_48dp);
+        tabLayout.getTabAt(3).setIcon(R.drawable.ic_lightbulb_outline_white_48dp);
     }
 
     public void initData() {
@@ -107,6 +108,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_shop) {
             viewPager.setCurrentItem(0);
         } else if (id == R.id.nav_about) {
+            startActivity(new Intent().setClass(this,AboutActivity.class));
         } else if (id == R.id.nav_pc) {
             viewPager.setCurrentItem(2);
         } else if (id == R.id.nav_rb) {
@@ -114,8 +116,8 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_rc) {
             viewPager.setCurrentItem(1);
         } else if (id == R.id.nav_share) {
-
         }
+
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

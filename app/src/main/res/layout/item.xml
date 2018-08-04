@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/Widget.MaterialComponents.CardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    android:layout_marginEnd="8dp"
-    android:layout_marginStart="8dp">
+    android:layout_margin="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -19,13 +16,12 @@
             android:id="@+id/item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_margin="32dp"
             android:ellipsize="end"
             android:singleLine="true"
             android:text="@string/text"
             android:textColor="@color/BLACK"
-            android:textSize="20sp"/>
+            android:textSize="20sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,12 +34,11 @@
                 android:id="@+id/item_pic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp"
                 android:layout_marginStart="32dp"
                 android:adjustViewBounds="true"
-                android:maxHeight="72dp"
                 android:maxWidth="72dp"
-                tools:ignore="ContentDescription"/>
+                android:maxHeight="72dp"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/item_content"
@@ -53,7 +48,7 @@
                 android:layout_margin="8dp"
                 android:gravity="top"
                 android:text="@string/text"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
         </LinearLayout>
 
         <RelativeLayout
@@ -66,22 +61,25 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
-                android:layout_margin="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"
                 android:text="@string/text"
                 app:backgroundTint="@color/colorPrimaryDark"
                 app:icon="@drawable/ic_attach_money_white_48dp"
-                app:iconSize="16dp"/>
+                app:iconSize="16dp" />
 
             <TextView
                 android:id="@+id/item_person"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
                 android:drawableStart="@drawable/ic_flag_black_24dp"
                 android:gravity="center"
-                android:padding="8dp"
-                android:text="@string/text"/>
+                android:layout_margin="32dp"
+                android:text="@string/text"
+                tools:ignore="RelativeOverlap" />
         </RelativeLayout>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
