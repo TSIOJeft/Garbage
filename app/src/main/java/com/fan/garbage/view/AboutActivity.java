@@ -62,8 +62,20 @@ public class AboutActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("mqqwpa://im/chat?chat_type=wpa&uin=840430119&version=1")));
-
-
+            }
+        });
+//        MaterialButton wechat = findViewById(R.id.wechat);
+//        wechat.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("wxp://f2f0b7TPdmrLplBhSpLqCGj-VlzeW1Ny1z4i\n")));
+//            }
+//        });
+        MaterialButton alipay = findViewById(R.id.alipay);
+        alipay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://qr.alipay.com/tsx04229jk8mp25hxaecz6f\n")));
             }
         });
     }

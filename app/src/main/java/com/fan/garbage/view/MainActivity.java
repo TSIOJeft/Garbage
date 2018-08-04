@@ -9,6 +9,9 @@ import com.fan.garbage.R;
 import com.fan.garbage.adpater.ViewPagerAdapter;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
+import com.tencent.bugly.crashreport.CrashReport;
+
+import java.util.Objects;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -55,15 +58,16 @@ public class MainActivity extends AppCompatActivity
 //        oo.setIcon(R.drawable.ic_package_variant);
 //        ooo.setIcon(R.drawable.ic_hangouts);
 //        oooo.setIcon(R.drawable.ic_leaf);
-        tabLayout.getTabAt(0).setIcon(R.drawable.ic_add_shopping_cart_white_48dp);
-        tabLayout.getTabAt(1).setIcon(R.drawable.ic_star_white_48dp);
-        tabLayout.getTabAt(2).setIcon(R.drawable.ic_mood_white_48dp);
-        tabLayout.getTabAt(3).setIcon(R.drawable.ic_lightbulb_outline_white_48dp);
+        Objects.requireNonNull(tabLayout.getTabAt(0)).setIcon(R.drawable.ic_add_shopping_cart_white_48dp);
+        Objects.requireNonNull(tabLayout.getTabAt(1)).setIcon(R.drawable.ic_star_white_48dp);
+        Objects.requireNonNull(tabLayout.getTabAt(2)).setIcon(R.drawable.ic_mood_white_48dp);
+        Objects.requireNonNull(tabLayout.getTabAt(3)).setIcon(R.drawable.ic_lightbulb_outline_white_48dp);
     }
 
     public void initData() {
         Bmob.initialize(this, getString(R.string.bmob_id));
 //        BmobDataSet.dataSet("test", "test", "test", "test", "test", "10", 1);
+        CrashReport.initCrashReport(this, getString(R.string.bugly_id), false);
     }
 
 
@@ -108,7 +112,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_shop) {
             viewPager.setCurrentItem(0);
         } else if (id == R.id.nav_about) {
-            startActivity(new Intent().setClass(this,AboutActivity.class));
+            startActivity(new Intent().setClass(this, AboutActivity.class));
         } else if (id == R.id.nav_pc) {
             viewPager.setCurrentItem(2);
         } else if (id == R.id.nav_rb) {

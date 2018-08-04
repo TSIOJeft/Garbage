@@ -48,7 +48,9 @@
                 android:layout_margin="8dp"
                 android:gravity="top"
                 android:text="@string/text"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:maxLines="4"
+                android:ellipsize="end"/>
         </LinearLayout>
 
         <RelativeLayout

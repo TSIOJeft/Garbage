@@ -19,4 +19,12 @@
     <string name="des2">被拖下水的苦逼肥宅，服务器数据上传的主要工作，控制台的 编写，商品信息获取解析的大大工作，负责优化代码。</string>
     <string name="des">APP部分编写的工作，一直沉迷学习无法敲代码，服务器数据分类，相关界面主要设计编写。</string>
     <string name="des3">小米市场开发者提供，帮助上架小米应用市场。</string>
+    <string name="ok">确定</string>
+    <string name="paste">复制链接</string>
+    <string name="donate">在快乐使用这个app的同时也不要忘记捐赠我们啊！一点小费将
+    给予我们无限动力，也会减缓我们接入广告的进度哒。\n(｡･∀･)ﾉﾞ</string>
+    <string name="alipay">支付宝</string>
+    <string name="wechat">微信</string>
+    <string name="bugly_id">2858da587f</string>
+    <string name="menu_">还没预定</string>
 </resources>

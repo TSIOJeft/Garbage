@@ -45,7 +45,7 @@ public class MainPageFragment extends Fragment {
         recyclerView.setLayoutManager(manager);
         adapter = new RecyclerViewAdapter(getContext(), datas);
         recyclerView.setAdapter(adapter);
-        addData(10, 0);
+        addData(30, 0);
         return view;
     }
 

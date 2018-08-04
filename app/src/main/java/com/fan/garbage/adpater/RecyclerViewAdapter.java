@@ -1,6 +1,9 @@
 package com.fan.garbage.adpater;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.view.LayoutInflater;
@@ -56,7 +59,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onClick(View view, int position) {
+    public void onClick(View view, final int position) {
         if (view.getId() == R.id.item_money) {
             Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse(data.get(position).url));
@@ -64,13 +67,25 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             Snackbar.make(view, "选择一个东西打开这个链接吧(｡･∀･)ﾉﾞ" + position, Snackbar.LENGTH_SHORT).show();
         } else {
             if (view.getId() == R.id.item_pic) {
-                ImageView pic = new ImageView(context);
-                loadPic(context, pic, data.get(position).pic);
-                new AlertDialog.Builder(context)
-                        .setView(pic)
-                        .show();
+//                ImageView pic = new ImageView(context);
+//                loadPic(context, pic, data.get(position).pic);
+//                new AlertDialog.Builder(context)
+//                        .setView(pic)
+//                        .show();
             } else {
-                Snackbar.make(view, "你点击了布局" + position, Snackbar.LENGTH_SHORT).show();
+//                new AlertDialog.Builder(context)
+//                        .setTitle(data.get(position).title)
+//                        .setMessage(data.get(position).content)
+//                        .setPositiveButton(R.string.ok,null)
+//                        .setNegativeButton(R.string.paste, new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialogInterface, int i) {
+//                                ClipboardManager clipboardManager=(ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+//                                ClipData clipData=ClipData.newPlainText("data",data.get(position).url);
+//                                clipboardManager.setPrimaryClip(clipData);
+//                            }
+//                        })
+//                        .show();
             }
         }
     }
@@ -92,7 +107,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         mViewHolder(View itemView) {
             super(itemView);
-
             itemView.setOnClickListener(itemClickListener);
             money.setOnClickListener(itemClickListener);
             pic.setOnClickListener(itemClickListener);

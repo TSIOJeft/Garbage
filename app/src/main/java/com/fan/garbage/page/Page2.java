@@ -34,7 +34,7 @@ public class Page2  extends Fragment {
         recyclerView.setLayoutManager(manager);
         adapter = new RecyclerViewAdapter(getContext(), datas);
         recyclerView.setAdapter(adapter);
-        addData(10,0);
+        addData(20,0);
         return view;
     }
     public void addData(int l, int s) {

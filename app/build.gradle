@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
 android {
-    compileSdkVersion 'android-P'
+    compileSdkVersion 28
     defaultConfig {
-        applicationId "com.fan.thegarbageman"
-        minSdkVersion 21
+        applicationId "com.fan.garbage"
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -35,5 +35,6 @@ allprojects {
         annotationProcessor 'com.github.bumptech.glide:compiler:4.7.1'
         implementation 'cn.bmob.android:bmob-sdk:3.6.3'
         implementation 'cn.bmob.android:http-legacy:1.0'
+        implementation 'com.tencent.bugly:crashreport:2.6.6.1'
     }
 }
